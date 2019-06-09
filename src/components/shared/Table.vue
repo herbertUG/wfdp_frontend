@@ -1,26 +1,14 @@
-<template></template>
+<template>
+  <v-data-table
+    :titles="titles"
+    :items="Type"
+    class="elevation-1"
+  >
 
+  </v-data-table>
+</template>
 
 <script>
-export default {
-  data() {
-    return {
-      titles: [
-        "Type",
-        "Surname",
-        "Given Name",
-        "Organisation",
-        "Title",
-        "Nationality",
-        "Sex",
-        "Date Of Birth",
-        "Date Of Issue",
-        "Date Of Expiration"
-      ]
-    };
-  }
-};
+export default {};
 </script>
 
-<style>
-</style>

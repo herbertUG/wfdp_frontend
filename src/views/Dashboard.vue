@@ -1,23 +1,33 @@
 <template>
   <div class="dashboard">
-    <h1 class="subheading grey--text ma-3">Dashboard</h1>
+    <h1 class="grey--text ma-3 font-weight-light">Dashboard</h1>
     <v-container class="my-5">
-      <v-layout row wrap>
-        <v-flex xs12 sm6 md4 lg3 v-for="detail in details" :key="detail.name">
-          <v-card flat class="text-xs-center ma-3">
+      <v-layout
+        row
+        wrap
+      >
+        <v-flex
+          xs12
+          sm6
+          md4
+          lg3
+          v-for="detail in details"
+          :key="detail.name"
+        >
+          <v-card
+            flat
+            class="text-xs-center ma-3"
+          >
             <v-card-text :class="`${detail.status}`">
               <div class="grey--text display-3">{{detail.count}}</div>
               <div class="subheading">{{detail.name}}</div>
             </v-card-text>
           </v-card>
         </v-flex>
-        <v-flex xs12 class="ma-3">
-    <v-data-table
-        :titles="titles"
-    :items="Type"
-    class="elevation-1">
-      
-    </v-data-table>
+        <v-flex
+          xs12
+          class="ma-3"
+        >
         </v-flex>
       </v-layout>
     </v-container>
@@ -44,7 +54,7 @@ export default {
           name: "My cards",
           count: 300
         }
-      ],
+      ]
     };
   }
 };
@@ -65,5 +75,4 @@ export default {
 .title:nth-child(1n) {
   margin-right: 68px;
 }
-
 </style>
