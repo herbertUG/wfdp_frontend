@@ -15,7 +15,10 @@
           id="cardStyle"
         >
           <v-card-text :class="`${detail.status}`">
-            <div class="display-3">{{detail.count}}</div>
+            <div
+              class="display-2"
+              id="count"
+            >{{detail.count}}</div>
             <div class="subheading">{{detail.name}}</div>
           </v-card-text>
         </v-card>
@@ -68,12 +71,17 @@ export default {
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   border-radius: 6px;
-  width: 350px;
+  height: 113px;
+  width: 220px;
 }
 .total {
   color: aqua;
 }
 .cards {
   color: blueviolet;
+}
+#count {
+  color: rgba(104, 104, 104, 0.8);
+  font-family: DINPro;
 }
 </style>
